@@ -7,7 +7,7 @@ from .views import SupplierViewSet
 app_name = SuppliersConfig.name
 
 router = DefaultRouter()
-router.register(r'suppliers', SupplierViewSet)
+router.register(r'', SupplierViewSet, basename='supplier')
 
 urlpatterns = [
     path('', include(router.urls)),

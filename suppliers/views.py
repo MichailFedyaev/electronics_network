@@ -8,5 +8,6 @@ class SupplierViewSet(viewsets.ModelViewSet):
     queryset = Supplier.objects.all()
     serializer_class = SupplierSerializer
     permission_classes = [IsActiveStaff]
-    filter_backends = [filters.SearchFilter]
-    search_fields = ['country']  # фильтрация по стране
+    filter_backends = [filters.SearchFilter, filters.OrderingFilter]
+    search_fields = ['country', 'city', 'name']
+    ordering_fields = ['name', 'created_at', 'debt']

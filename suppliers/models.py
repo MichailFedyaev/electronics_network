@@ -54,6 +54,9 @@ class Product(models.Model):
         verbose_name = "Продукт"
         verbose_name_plural = "Продукты"
         ordering = ["-pk", ]
+        indexes = [
+            models.Index(fields=["-pk"]),
+        ]
 
     def __str__(self):
         return f"{self.name} ({self.model})"
