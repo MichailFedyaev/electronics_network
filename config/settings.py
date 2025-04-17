@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "rest_framework",
     "rest_framework_simplejwt",
+    # 'django_ratelimit',
     "drf_yasg",
     'suppliers',
     'users',
@@ -163,4 +164,6 @@ SWAGGER_SETTINGS = {
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=180),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
+    'ROTATE_REFRESH_TOKENS': True,  # Автоматическое обновление refresh токена
+    'BLACKLIST_AFTER_ROTATION': True,  # Добавление старого refresh токена в черный список
 }

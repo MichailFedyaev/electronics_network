@@ -5,12 +5,13 @@ from django.contrib.auth import get_user_model
 class Command(BaseCommand):
     """Кастомная команда создания суперпользователя"""
     help = 'Создает суперпользователя с заданными параметрами'
+    # python manage.py csu --username=myadmin --email=myadmin@example.com --password=mypassword
 
     def add_arguments(self, parser):
         parser.add_argument(
             '--username',
             type=str,
-            default='misha',
+            default='misha52',
             help='Имя пользователя для суперпользователя'
         )
         parser.add_argument(
