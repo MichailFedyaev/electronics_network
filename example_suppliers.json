@@ -1,0 +1,100 @@
+[
+{
+    "model": "suppliers.supplier",
+    "pk": 4,
+    "fields": {
+        "name": "ЮурМК",
+        "email": "zavod.1@mail.ru",
+        "country": "Россия",
+        "city": "Москва",
+        "street": "Красная 1",
+        "house_number": "4",
+        "supplier": null,
+        "debt": "600.00",
+        "created_at": "2025-04-21T07:17:09.529Z",
+        "products": []
+    }
+},
+{
+    "model": "suppliers.supplier",
+    "pk": 5,
+    "fields": {
+        "name": "Я не знаю реалньо",
+        "email": "zavod.3@mail.ru",
+        "country": "Россия",
+        "city": "Тверь",
+        "street": "Хуанамантана",
+        "house_number": "6",
+        "supplier": 4,
+        "debt": "400.00",
+        "created_at": "2025-04-21T07:20:43.320Z",
+        "products": [
+            4
+        ]
+    }
+},
+{
+    "model": "suppliers.supplier",
+    "pk": 6,
+    "fields": {
+        "name": "Мелас",
+        "email": "zavod.6@mail.ru",
+        "country": "Россия",
+        "city": "Миасс",
+        "street": "Рудка 14",
+        "house_number": "90",
+        "supplier": 5,
+        "debt": "10.00",
+        "created_at": "2025-04-21T07:21:54.688Z",
+        "products": []
+    }
+},
+{
+    "model": "suppliers.supplier",
+    "pk": 7,
+    "fields": {
+        "name": "ЗАВОД",
+        "email": "zavod.14@mail.ru",
+        "country": "Россия",
+        "city": "Питер",
+        "street": "Хуанамантана 132",
+        "house_number": "8",
+        "supplier": null,
+        "debt": "400.00",
+        "created_at": "2025-04-21T07:22:50.376Z",
+        "products": []
+    }
+},
+{
+    "model": "suppliers.supplier",
+    "pk": 8,
+    "fields": {
+        "name": "ШЛЯПА",
+        "email": "zavod.12@mail.ru",
+        "country": "Россия",
+        "city": "Вологда",
+        "street": "Победы 42",
+        "house_number": "52",
+        "supplier": 5,
+        "debt": "1000.00",
+        "created_at": "2025-04-21T07:23:40.844Z",
+        "products": []
+    }
+},
+{
+    "model": "suppliers.supplier",
+    "pk": 9,
+    "fields": {
+        "name": "ДУАЛИПА",
+        "email": "zavod.123@mail.ru",
+        "country": "Россия",
+        "city": "Дымкова",
+        "street": "Хуанамантана 3",
+        "house_number": "62",
+        "supplier": 4,
+        "debt": "459.00",
+        "created_at": "2025-04-21T07:25:02.247Z",
+        "products": []
+    }
+}
+]

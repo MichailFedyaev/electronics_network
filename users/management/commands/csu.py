@@ -11,7 +11,7 @@ class Command(BaseCommand):
         parser.add_argument(
             '--username',
             type=str,
-            default='misha52',
+            default='admin',
             help='Имя пользователя для суперпользователя'
         )
         parser.add_argument(
