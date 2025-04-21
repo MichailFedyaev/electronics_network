@@ -10,43 +10,92 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Product',
+            name="Product",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=255, verbose_name='Название')),
-                ('model', models.CharField(max_length=255, verbose_name='Модель')),
-                ('release_date', models.DateField(verbose_name='Дата выхода на рынок')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=255, verbose_name="Название")),
+                ("model", models.CharField(max_length=255, verbose_name="Модель")),
+                ("release_date", models.DateField(verbose_name="Дата выхода на рынок")),
             ],
             options={
-                'verbose_name': 'Продукт',
-                'verbose_name_plural': 'Продукты',
-                'ordering': ['-pk'],
+                "verbose_name": "Продукт",
+                "verbose_name_plural": "Продукты",
+                "ordering": ["-pk"],
             },
         ),
         migrations.CreateModel(
-            name='Supplier',
+            name="Supplier",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=255, verbose_name='Название')),
-                ('email', models.EmailField(max_length=254, verbose_name='Email')),
-                ('country', models.CharField(max_length=100, verbose_name='Страна')),
-                ('city', models.CharField(max_length=100, verbose_name='Город')),
-                ('street', models.CharField(max_length=100, verbose_name='Улица')),
-                ('house_number', models.CharField(max_length=20, verbose_name='Номер дома')),
-                ('debt', models.DecimalField(decimal_places=2, default=Decimal('0.00'), max_digits=10, validators=[django.core.validators.MinValueValidator(Decimal('0.00'))], verbose_name='Задолженность')),
-                ('created_at', models.DateTimeField(auto_now_add=True, verbose_name='Время создания')),
-                ('products', models.ManyToManyField(blank=True, to='suppliers.product', verbose_name='Продукты')),
-                ('supplier', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='sub_suppliers', to='suppliers.supplier', verbose_name='Поставщик')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=255, verbose_name="Название")),
+                ("email", models.EmailField(max_length=254, verbose_name="Email")),
+                ("country", models.CharField(max_length=100, verbose_name="Страна")),
+                ("city", models.CharField(max_length=100, verbose_name="Город")),
+                ("street", models.CharField(max_length=100, verbose_name="Улица")),
+                (
+                    "house_number",
+                    models.CharField(max_length=20, verbose_name="Номер дома"),
+                ),
+                (
+                    "debt",
+                    models.DecimalField(
+                        decimal_places=2,
+                        default=Decimal("0.00"),
+                        max_digits=10,
+                        validators=[
+                            django.core.validators.MinValueValidator(Decimal("0.00"))
+                        ],
+                        verbose_name="Задолженность",
+                    ),
+                ),
+                (
+                    "created_at",
+                    models.DateTimeField(
+                        auto_now_add=True, verbose_name="Время создания"
+                    ),
+                ),
+                (
+                    "products",
+                    models.ManyToManyField(
+                        blank=True, to="suppliers.product", verbose_name="Продукты"
+                    ),
+                ),
+                (
+                    "supplier",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.SET_NULL,
+                        related_name="sub_suppliers",
+                        to="suppliers.supplier",
+                        verbose_name="Поставщик",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Поставщик',
-                'verbose_name_plural': 'Поставщики',
-                'ordering': ['-pk'],
+                "verbose_name": "Поставщик",
+                "verbose_name_plural": "Поставщики",
+                "ordering": ["-pk"],
             },
         ),
     ]

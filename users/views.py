@@ -7,7 +7,7 @@ from rest_framework_simplejwt.views import TokenObtainPairView
 # (надо использовать с редисом но мне было в падлу так расширять MVP)
 class CustomTokenObtainPairView(TokenObtainPairView):
     def post(self, request, *args, **kwargs):
-        response = super().post(request, *args, **kwargs) # Вызываем родительский метод для
+        response = super().post(request, *args, **kwargs)  # Вызываем родительский метод для
         # выполнения стандартной аутентификации
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
