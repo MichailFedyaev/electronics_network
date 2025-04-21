@@ -71,7 +71,7 @@ python manage.py csu [--username USERNAME] [--email EMAIL] [--password PASSWORD]
 По умолчанию создает пользователя:
 - username: admin
 - email: admin@example.com
-- password: 123qwe456rty
+- password: 123
 
 ### Загрузка тестовых данных
 ```bash
