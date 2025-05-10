@@ -1,0 +1,74 @@
+[
+{
+    "model": "suppliers.product",
+    "pk": 1,
+    "fields": {
+        "name": "Валенки",
+        "model": "Модель 2",
+        "release_date": "2025-04-21"
+    }
+},
+{
+    "model": "suppliers.product",
+    "pk": 2,
+    "fields": {
+        "name": "Сланцы",
+        "model": "Модель 1",
+        "release_date": "2025-04-21"
+    }
+},
+{
+    "model": "suppliers.product",
+    "pk": 3,
+    "fields": {
+        "name": "Ошейник",
+        "model": "Модель 3",
+        "release_date": "2025-04-21"
+    }
+},
+{
+    "model": "suppliers.product",
+    "pk": 4,
+    "fields": {
+        "name": "Рубанок",
+        "model": "Модель 4",
+        "release_date": "2025-04-21"
+    }
+},
+{
+    "model": "suppliers.product",
+    "pk": 5,
+    "fields": {
+        "name": "Вафли",
+        "model": "Модель 5",
+        "release_date": "2025-04-21"
+    }
+},
+{
+    "model": "suppliers.product",
+    "pk": 6,
+    "fields": {
+        "name": "Кружка",
+        "model": "Модель 6",
+        "release_date": "2025-04-21"
+    }
+},
+{
+    "model": "suppliers.product",
+    "pk": 7,
+    "fields": {
+        "name": "Наушники",
+        "model": "Модель 7",
+        "release_date": "2025-04-21"
+    }
+},
+{
+    "model": "suppliers.product",
+    "pk": 8,
+    "fields": {
+        "name": "Клавиатура",
+        "model": "Модель 7",
+        "release_date": "2025-04-21"
+    }
+}
+]
